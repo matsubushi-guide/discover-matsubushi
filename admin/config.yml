@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: ruki57-ctrl/discover-matsubushi
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "ページ"
+    files:
+      - file: "index.html"
+        label: "トップページ"
+        name: "home"
+        fields:
+          - {label: "本文", name: "body", widget: "markdown"}
