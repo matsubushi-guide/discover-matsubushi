@@ -315,9 +315,7 @@ Discover<br>
 Matsubushi
 </h1>
 
-<p>
-まだ知らない松伏町の魅力を見つけよう
-</p>
+<p id="introText">まだ知らない松伏町の魅力を見つけよう。</p>
 
 </div>
 
@@ -418,6 +416,13 @@ btn.onclick=function(){
 menu.classList.toggle("open");
 }
 
+</script>
+  <script>
+const intro = localStorage.getItem("intro");
+
+if(intro){
+  document.getElementById("introText").innerHTML = intro;
+}
 </script>
 </body>
 </html>
