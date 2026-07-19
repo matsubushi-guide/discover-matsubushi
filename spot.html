@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>観光スポット | Discover Matsubushi</title>
+
+<style>
+body{
+ margin:0;
+ font-family:sans-serif;
+ background:#f5fff8;
+ color:#333;
+}
+
+header{
+ background:linear-gradient(135deg,#2d7a4b,#55b87a);
+ color:white;
+ padding:50px 20px;
+ text-align:center;
+}
+
+header h1{
+ font-size:40px;
+}
+
+.card{
+ background:white;
+ margin:25px;
+ border-radius:25px;
+ overflow:hidden;
+ box-shadow:0 10px 30px #ddd;
+ animation:show 1s;
+}
+
+.card img{
+ width:100%;
+ height:220px;
+ object-fit:cover;
+}
+
+.text{
+ padding:25px;
+}
+
+@keyframes show{
+ from{
+ opacity:0;
+ transform:translateY(40px);
+ }
+ to{
+ opacity:1;
+ transform:translateY(0);
+ }
+}
+
+.back{
+ display:block;
+ text-align:center;
+ margin:40px;
+ color:#2d7a4b;
+ text-decoration:none;
+ font-weight:bold;
+}
+.nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+z-index:10;
+box-shadow:0 3px 15px #ddd;
+}
+
+.nav h2{
+color:#2d7a4b;
+font-size:20px;
+}
+
+.nav a{
+margin-left:15px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+
+@media(max-width:700px){
+
+.nav{
+flex-direction:column;
+}
+
+.nav a{
+font-size:13px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+<nav class="nav">
+
+<h2>🌿 Discover Matsubushi</h2>
+
+<div>
+<a href="index.html">🏠 ホーム</a>
+<a href="spot.html">📍 観光</a>
+<a href="food.html">🍜 グルメ</a>
+<a href="event.html">🎉 イベント</a>
+</div>
+
+</nav>
+
+<header>
+<h1>📍 観光スポット</h1>
+<p>松伏町の魅力ある場所を巡ろう</p>
+</header>
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+<div class="text">
+<h2>🌳 まつぶし緑の丘公園</h2>
+<p>
+広い芝生や自然を楽しめる、松伏町を代表する公園です。
+</p>
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+
+<div class="text">
+<h2>🌊 大落古利根川</h2>
+<p>
+水辺の景色や季節の変化を楽しめる場所です。
+</p>
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+
+<div class="text">
+<h2>🌾 松伏町の自然</h2>
+<p>
+豊かな自然と落ち着いた風景が広がっています。
+</p>
+</div>
+
+</div>
+
+
+<a class="back" href="index.html">
+← ホームへ戻る
+</a>
+
+
+</body>
+</html>

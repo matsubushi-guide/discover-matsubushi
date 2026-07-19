@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>フォトギャラリー | Discover Matsubushi</title>
+
+<style>
+
+body{
+margin:0;
+font-family:sans-serif;
+background:#f5fff8;
+}
+
+header{
+background:linear-gradient(135deg,#2d7a4b,#70c98b);
+color:white;
+padding:50px 20px;
+text-align:center;
+}
+
+
+.gallery{
+display:grid;
+grid-template-columns:1fr;
+gap:25px;
+padding:25px;
+}
+
+
+.photo{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px #ddd;
+animation:show 1s;
+}
+
+
+.photo img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+
+.photo p{
+padding:20px;
+font-size:18px;
+}
+
+
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+.back{
+display:block;
+text-align:center;
+margin:40px;
+color:#2d7a4b;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>📸 フォトギャラリー</h1>
+
+<p>松伏町の魅力を写真で発見</p>
+
+</header>
+
+
+
+<div class="gallery">
+
+
+<div class="photo">
+
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+
+<p>🌿 自然あふれる風景</p>
+
+</div>
+
+
+
+<div class="photo">
+
+<img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e">
+
+<p>🌳 緑豊かな場所</p>
+
+</div>
+
+
+
+<div class="photo">
+
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+
+<p>🌅 季節を感じる景色</p>
+
+</div>
+
+
+</div>
+
+
+
+<a class="back" href="index.html">
+← ホームへ戻る
+</a>
+
+
+</body>
+
+</html>
