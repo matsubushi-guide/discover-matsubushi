@@ -3,84 +3,421 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Discover Matsubushi</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #f5fff8;
-  color: #333;
+*{
+  box-sizing:border-box;
 }
 
-.hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  animation: fadeIn 2s;
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:#f5fff8;
+  color:#333;
 }
 
-h1 {
-  font-size: 45px;
-  margin-bottom: 10px;
+/* トップ画面 */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+background:
+linear-gradient(
+rgba(0,0,0,0.35),
+rgba(0,0,0,0.45)
+),
+url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+
+background-size:cover;
+background-position:center;
+.hero{
+position:relative;
+overflow:hidden;
 }
 
-p {
-  font-size: 20px;
+.hero h1{
+  font-size:55px;
+  animation:fadeDown 1.5s;
 }
 
-.card {
-  margin: 20px;
-  padding: 25px;
-  border-radius: 20px;
-  background: white;
-  box-shadow: 0 5px 20px #ddd;
-  animation: slideUp 1s;
+.hero p{
+  font-size:22px;
+  animation:fadeUp 2s;
+}
+padding-top:80px;
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:15px 35px;
+  background:white;
+  color:#2d7a4b;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  animation:fadeUp 2.5s;
 }
 
-@keyframes fadeIn {
-  from {opacity:0;}
-  to {opacity:1;}
+/* カード */
+.section{
+  padding:50px 20px;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(40px);
-    opacity:0;
-  }
-  to {
-    transform: translateY(0);
-    opacity:1;
-  }
+.card{
+  background:white;
+  margin:20px auto;
+  padding:30px;
+  max-width:500px;
+  border-radius:25px;
+  box-shadow:0 10px 30px #ddd;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+/* アニメーション */
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.menu{
+ display:flex;
+ flex-direction:column;
+ gap:15px;
+ margin-top:30px;
+}
+
+.menu a{
+ background:white;
+ color:#2d7a4b;
+ padding:15px 30px;
+ border-radius:50px;
+ text-decoration:none;
+ font-weight:bold;
+ transition:0.3s;
+}
+
+.menu a:hover{
+ transform:scale(1.05);
+}
+.sns{
+ text-align:center;
+ padding:60px 20px;
+ background:#ffffff;
+}
+
+.sns a{
+ display:block;
+ max-width:300px;
+ margin:15px auto;
+ padding:15px;
+ background:#2d7a4b;
+ color:white;
+ border-radius:50px;
+ text-decoration:none;
+ font-weight:bold;
+ transition:0.3s;
+}
+
+.sns a:hover{
+ transform:scale(1.05);
+}
+
+
+footer{
+ background:#222;
+ color:white;
+ text-align:center;
+ padding:20px;
+}
+.nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+z-index:10;
+box-shadow:0 3px 15px #ddd;
+}
+
+.nav h2{
+color:#2d7a4b;
+font-size:20px;
+}
+
+.nav a{
+margin-left:15px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+}
+
+
+@media(max-width:700px){
+
+.nav{
+flex-direction:column;
+}
+
+.nav a{
+font-size:13px;
+}
+
+}
+<div class="logo">
+
+<h1>
+🌿 Discover<br>
+Matsubushi
+</h1>
+
+<span>
+まだ知らない松伏町の魅力を見つけよう
+</span>
+
+<p class="catch">
+自然と笑顔が広がる町、松伏。
+</p>
+</div>
+.catch{
+margin-top:25px;
+font-size:18px;
+letter-spacing:3px;
+animation:fadeUp 3s;
+}
+.menu-btn{
+display:none;
+font-size:30px;
+background:none;
+border:none;
+}
+
+
+@media(max-width:700px){
+
+.menu-btn{
+display:block;
+}
+
+.nav div{
+display:none;
+}
+
+.nav div.open{
+display:block;
+}
+
+}
+.brand{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+animation:logoShow 2s;
+}
+
+
+.mark{
+font-size:70px;
+}
+
+
+.brand h1{
+font-size:55px;
+line-height:1.1;
+margin:0;
+}
+
+
+.brand p{
+letter-spacing:3px;
+}
+
+
+@media(max-width:700px){
+
+.brand{
+flex-direction:column;
+}
+
+.brand h1{
+font-size:40px;
+}
+
 }
 </style>
 </head>
 
 <body>
+<nav class="nav">
+
+<h2>🌿 Discover Matsubushi</h2>
+
+<button class="menu-btn">
+☰
+</button>
+
+<div>
+<a href="index.html">🏠 ホーム</a>
+<a href="spot.html">📍 観光</a>
+<a href="food.html">🍜 グルメ</a>
+<a href="event.html">🎉 イベント</a>
+<a href="gallery.html">📸 写真</a>
+<a href="map.html">🗺️ マップ</a>
+<a href="sns.html">📱 SNS</a>
+<a href="contact.html">📩 お問い合わせ</a>
+</div>
+
+</nav>
 
 <section class="hero">
+
 <div>
-<h1>Discover Matsubushi</h1>
-<p>まだ知らない松伏町の魅力を見つけよう。</p>
+<div class="logo">
+
+<div class="brand">
+
+<div class="mark">
+🌿
 </div>
+
+<div>
+<h1>
+Discover<br>
+Matsubushi
+</h1>
+
+<p>
+まだ知らない松伏町の魅力を見つけよう
+</p>
+
+</div>
+
+</div>
+
+<span>
+まだ知らない松伏町の魅力を見つけよう
+</span>
+
+</div>
+
+<p>
+まだ知らない松伏町の魅力を見つけよう。
+</p>
+
+<div class="menu">
+
+<a href="spot.html">
+📍 観光スポット
+</a>
+
+<a href="food.html">
+🍜 グルメ
+</a>
+
+<a href="event.html">
+🎉 イベント
+</a>
+
+</div>
+
+</div>
+
 </section>
+
+
+<section class="section" id="menu">
 
 <div class="card">
 <h2>📍 観光スポット</h2>
-<p>自然・公園・おすすめの場所を紹介</p>
+<p>
+自然、公園、松伏町のおすすめ場所を紹介します。
+</p>
 </div>
+
 
 <div class="card">
 <h2>🍜 グルメ</h2>
-<p>松伏町のおいしいお店を紹介</p>
+<p>
+松伏町のおいしいお店や人気グルメを紹介します。
+</p>
 </div>
+
 
 <div class="card">
 <h2>🎉 イベント</h2>
-<p>地域のイベント情報を発信</p>
+<p>
+地域のイベント情報を発信します。
+</p>
 </div>
 
+</section>
+
+<!-- SNSエリア -->
+
+<section class="sns">
+
+<h2>📱 Follow us</h2>
+
+<p>
+松伏町の最新情報を発信中！
+</p>
+
+<a href="https://www.tiktok.com/@discovermatsubushi">
+🎵 TikTok @discovermatsubushi
+</a>
+
+<a href="#">
+💬 LINE公式アカウント
+</a>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 Discover Matsubushi
+</p>
+
+</footer>
+<script>
+
+const btn=document.querySelector(".menu-btn");
+const menu=document.querySelector(".nav div");
+
+btn.onclick=function(){
+menu.classList.toggle("open");
+}
+
+</script>
 </body>
 </html>
