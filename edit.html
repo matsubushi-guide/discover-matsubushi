@@ -70,7 +70,29 @@ button{
 
 
 <button onclick="saveData()">保存する</button>
+<button onclick="downloadData()">更新ファイル作成</button>
 
+<script>
+function downloadData(){
+
+let text = document.getElementById("intro").value;
+
+let data = {
+intro:text
+};
+
+let blob = new Blob(
+[JSON.stringify(data)],
+{type:"application/json"}
+);
+
+let a=document.createElement("a");
+a.href=URL.createObjectURL(blob);
+a.download="data.json";
+a.click();
+
+}
+</script>
 
 </div>
 <script>
