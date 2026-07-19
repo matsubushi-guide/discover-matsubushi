@@ -47,11 +47,33 @@ button{
 
 <p>Discover Matsubushi</p>
 
-<input placeholder="パスワード">
+<input id="pass" type="password" placeholder="パスワード">
 
-<button>ログイン</button>
+<button onclick="login()">ログイン</button>
+
+<p id="msg"></p>
 
 </div>
+
+
+<script>
+function login(){
+
+const password = document.getElementById("pass").value;
+
+if(password === "matsubushi staff 1204"){
+
+location.href="edit.html";
+
+}else{
+
+document.getElementById("msg").innerHTML="パスワードが違います";
+
+}
+
+}
+</script>
+
 
 </body>
 </html>
